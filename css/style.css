@@ -56,7 +56,7 @@ header a:hover {
 }
 /* Start the styles here */
 .shortlink {
-  width: 245px;
+  width: 300px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -84,5 +84,9 @@ header a:hover {
   position: relative;
   bottom: 3px;
   color: #59687b;
+}
+.shortlink__url::selection {
+  background-color: #254d86;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
