@@ -2,21 +2,15 @@
 	var target = document.querySelector('.shortlink');
 
 	function selection(elem) {
-  	var doc  = document,
-				elem = doc.querySelector(elem),
-				range,
-				select;
+		var elem   = document.querySelector(elem);
+		var select = window.getSelection();
+		var range  = document.createRange();
 
-				select = window.getSelection();
-				range  = document.createRange();
-
-				range.selectNodeContents(elem);
-				select.removeAllRanges();
-				select.addRange(range);
+		range.selectNodeContents(elem);
+		select.addRange(range);
 	}
-
+	
 	target.onclick = function() {
 		selection('.shortlink__url');
 	};
-	
 })(jQuery);
